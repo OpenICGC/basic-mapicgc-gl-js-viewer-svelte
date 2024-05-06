@@ -1,4 +1,4 @@
-## basic mapicgc-gl-js viewer sevelt
+## basic mapicgc-gl-js viewer Svelte
 
   * Basic mapicgc-gl-js viewer
   * Svelte + Vite
@@ -16,6 +16,8 @@ npm run build
 npm run dev
 
 ```
+
+### Svelte
 
 ```javascript
   import { onMount, onDestroy } from "svelte";
