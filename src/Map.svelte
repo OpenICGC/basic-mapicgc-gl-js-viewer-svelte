@@ -31,10 +31,14 @@
 <style>
   .map-container {
     position: relative;
-    width: 100%;
+    top:10vh;
+    left:10vw;
+    width: calc(
+      90vw - 10vw
+    ); 
     height: calc(
-      100vh - 77px
-    ); /* calculate height of the screen minus the heading */
+      90vh - 10vh
+    );  
   }
 
   .map {

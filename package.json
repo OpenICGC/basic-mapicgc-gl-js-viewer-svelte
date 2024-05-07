@@ -1,7 +1,6 @@
 {
-  "name": "basic-mapicgc-gl-js-svelte",
-  "private": true,
-  "version": "0.0.0",
+  "name": "basic-mapicgc-gl-js-viewer-svelte",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",

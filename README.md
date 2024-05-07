@@ -3,6 +3,9 @@
   * Basic mapicgc-gl-js viewer
   * Svelte + Vite
 
+### Mapicgc-gl-js documentation
+
+  * https://openicgc.github.io/mapicgc-doc/
 
 ### To install
 
