@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:prod": "vite build --base=/basic-mapicgc-gl-js-viewer-svelte/",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -13,6 +13,6 @@
     "vite": "^5.4.4"
   },
   "dependencies": {
-    "mapicgc-gl-js": "^0.0.96"
+    "mapicgc-gl-js": "^0.0.95"
   }
 }
