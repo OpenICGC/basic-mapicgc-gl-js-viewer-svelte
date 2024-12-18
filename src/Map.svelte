@@ -4,7 +4,7 @@
   import "../node_modules/mapicgc-gl-js/dist/mapicgc-gl.css";
 
   let map;
-  let mapContainer;
+  let mapContainer = $state();
 
   onMount(async () => {
     const data = await Config.getConfigICGC();
