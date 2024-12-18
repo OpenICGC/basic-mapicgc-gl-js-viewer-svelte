@@ -1,7 +1,12 @@
-## basic mapicgc-gl-js viewer Svelte
+## Basic mapicgc-gl-js viewer Svelte
 
   * Basic mapicgc-gl-js viewer
   * Svelte 5 + Vite
+
+### Demo 
+
+  * https://openicgc.github.io/basic-mapicgc-gl-js-viewer-svelte/dist/index.html
+
 
 ### Mapicgc-gl-js documentation
 
