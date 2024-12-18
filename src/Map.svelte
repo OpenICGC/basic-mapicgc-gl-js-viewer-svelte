@@ -4,10 +4,11 @@
   import "../node_modules/mapicgc-gl-js/dist/mapicgc-gl.css";
 
   let map;
-  let mapContainer = $state();
+  let mapContainer = $state(); 
 
   onMount(async () => {
     const data = await Config.getConfigICGC();
+    console.info("què és això", data);
     map = new Map({
       container: mapContainer,
       style: data.Styles.TOPO,
@@ -17,10 +18,28 @@
       hash: true,
       pitch: 0,
     });
+
+    map.on("load", () => {
+      map.addGeocoderICGC();
+      map.addGeolocateControl(
+        {
+          positionOptions: {
+            enableHighAccuracy: true,
+          },
+          trackUserLocation: true,
+        },
+        "bottom-right"
+      );
+      map.addExportControl({}, "top-right");
+      map.addFullscreenControl({}, "top-right");
+      map.addTerrainICGC(data.Terrains.WORLD30M, "bottom-right");
+    });
   });
 
   onDestroy(() => {
-    map.remove();
+    if (map) {
+      map.remove(); 
+    }
   });
 </script>
 

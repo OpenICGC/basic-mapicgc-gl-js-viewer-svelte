@@ -1,7 +1,7 @@
 ## basic mapicgc-gl-js viewer Svelte
 
   * Basic mapicgc-gl-js viewer
-  * Svelte + Vite
+  * Svelte 5 + Vite
 
 ### Mapicgc-gl-js documentation
 
@@ -28,7 +28,7 @@ npm run dev
   import "../node_modules/mapicgc-gl-js/dist/mapicgc-gl.css";
 
   let map;
-  let mapContainer;
+  let mapContainer = $state(); 
 
   onMount(async () => {
     const data = await Config.getConfigICGC();
@@ -40,6 +40,22 @@ npm run dev
       maxZoom: 19,
       hash: true,
       pitch: 0,
+    });
+
+    map.on("load", () => {
+      map.addGeocoderICGC();
+      map.addGeolocateControl(
+        {
+          positionOptions: {
+            enableHighAccuracy: true,
+          },
+          trackUserLocation: true,
+        },
+        "bottom-right"
+      );
+      map.addExportControl({}, "top-right");
+      map.addFullscreenControl({}, "top-right");
+      map.addTerrainICGC(data.Terrains.ICGC5M, "bottom-right");
     });
   });
 
